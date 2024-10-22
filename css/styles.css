@@ -3,7 +3,7 @@ header {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
   align-items: start;
-  background-image: url("/img/fondo.png");
+  background-image: url(../img/fondo.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -172,13 +172,13 @@ html, body {
     left: 60px;
     margin-top: 50px;
     opacity: 20%;
-    background-image: url("../img/fondoGaleriaCostados1.png");
+    background-image: url(../img/fondoGaleriaCostados1.png);
   }
   main.imagenesLaterales::after {
     right: 60px;
     margin-top: 50px;
     opacity: 20%;
-    background-image: url("../img/fondoGaleriaCostados2.png");
+    background-image: url(../img/fondoGaleriaCostados2.png);
   }
 }
 .footer {

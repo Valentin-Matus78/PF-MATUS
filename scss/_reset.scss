@@ -26,11 +26,11 @@ html, body {
 
   main.imagenesLaterales::before {
     @include imagenes-laterales-1;
-    background-image: url("../img/fondoGaleriaCostados1.png");
+    background-image: url(../img/fondoGaleriaCostados1.png);
   }
 
   main.imagenesLaterales::after {
     @include iamgenes-laterales-2;
-    background-image: url("../img/fondoGaleriaCostados2.png");
+    background-image: url(../img/fondoGaleriaCostados2.png);
   }
 }
