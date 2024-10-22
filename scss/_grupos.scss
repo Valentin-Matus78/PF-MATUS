@@ -7,7 +7,7 @@
     padding: 15px;
     border-radius: 10px;
     @include imagenes;
-    background-image: url(../img/fondoLogo.jpg);
+    background-image: url("../img/fondoLogo.jpg");
   
     .imagenGrupo {
       width: 100%;

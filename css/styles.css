@@ -3,7 +3,7 @@ header {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
   align-items: start;
-  background-image: url(../img/fondo.png);
+  background-image: url("../img/fondo.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -149,7 +149,7 @@ header .titulo2 h2 {
 
 html, body {
   height: 100%;
-  background-color: rgba(247, 218, 243, 0.941);
+  background-color: rgb(244, 205, 211);
 }
 
 @media (min-width: 768px) {
@@ -172,17 +172,17 @@ html, body {
     left: 60px;
     margin-top: 50px;
     opacity: 20%;
-    background-image: url(../img/fondoGaleriaCostados1.png);
+    background-image: url("../img/fondoGaleriaCostados1.png");
   }
   main.imagenesLaterales::after {
     right: 60px;
     margin-top: 50px;
     opacity: 20%;
-    background-image: url(../img/fondoGaleriaCostados2.png);
+    background-image: url("../img/fondoGaleriaCostados2.png");
   }
 }
 .footer {
-  background-image: url(../img/fondoFooter.jpg);
+  background-image: url("../img/fondoFooter.jpg");
   color: white;
   padding: 20px;
   text-align: center;
@@ -211,7 +211,7 @@ html, body {
   margin-bottom: 10px;
   font-size: 22px;
   color: white;
-  border-bottom: 2px solid rgba(247, 218, 243, 0.941);
+  border-bottom: 2px solid rgb(244, 205, 211);
 }
 .footer .footerContenido .footerNosotros p,
 .footer .footerContenido .footerSocial p {
@@ -361,7 +361,7 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../img/fondoLogo.jpg);
+  background-image: url("../img/fondoLogo.jpg");
 }
 .grupo .imagenGrupo {
   width: 100%;
@@ -432,7 +432,7 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../img/oshi-no-ko-bd.jpg);
+  background-image: url("../img/oshi-no-ko-bd.jpg");
   padding: 15px;
   border-radius: 10px;
 }
