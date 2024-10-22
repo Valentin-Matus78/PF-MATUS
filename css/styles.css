@@ -3,8 +3,8 @@ header {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
   align-items: start;
-  background-image: url("../img/fondo.png");
-  background-position: center center;
+  background-image: url("/img/fondo.png");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
@@ -85,7 +85,7 @@ header .titulo2 h2 {
 .menu ul {
   display: flex;
   justify-content: space-around;
-  background-color: #ff69b4;
+  background-color: #ffa5d2;
   list-style: none;
   padding: 0%;
   margin: 0;
@@ -119,11 +119,14 @@ header .titulo2 h2 {
   display: flex;
   margin: 20px auto;
   padding: 10px 20px;
-  background-color: #e0f7fa;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   width: 100%;
+  background-image: url("../img/cerezos.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .tituloMenu h3 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -134,6 +137,11 @@ header .titulo2 h2 {
   font-weight: bold;
 }
 
+@media (max-width: 768px) {
+  .tituloMenu {
+    width: 300px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -141,15 +149,47 @@ header .titulo2 h2 {
 
 html, body {
   height: 100%;
-  background-color: rgb(244, 205, 211);
+  background-color: rgba(247, 218, 243, 0.941);
 }
 
+@media (min-width: 768px) {
+  main.imagenesLaterales {
+    position: relative;
+  }
+  main.imagenesLaterales::before,
+  main.imagenesLaterales::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 200px;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+  }
+  main.imagenesLaterales::before {
+    left: 60px;
+    margin-top: 50px;
+    opacity: 20%;
+    background-image: url("../img/fondoGaleriaCostados1.png");
+  }
+  main.imagenesLaterales::after {
+    right: 60px;
+    margin-top: 50px;
+    opacity: 20%;
+    background-image: url("../img/fondoGaleriaCostados2.png");
+  }
+}
 .footer {
-  background-color: rgba(95, 87, 87, 0.7843137255);
+  background-image: url(../img/fondoFooter.jpg);
   color: white;
   padding: 20px;
   text-align: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .footer .footerContenido {
   display: flex;
@@ -159,6 +199,7 @@ html, body {
   max-width: 800px;
   margin: auto;
   padding: 0 20px;
+  font-weight: bold;
 }
 .footer .footerContenido .footerNosotros,
 .footer .footerContenido .footerSocial {
@@ -168,9 +209,9 @@ html, body {
 .footer .footerContenido .footerSocial h3 {
   font: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 22px;
   color: white;
-  border-bottom: 2px solid rgb(244, 205, 211);
+  border-bottom: 2px solid rgba(247, 218, 243, 0.941);
 }
 .footer .footerContenido .footerNosotros p,
 .footer .footerContenido .footerSocial p {
@@ -184,10 +225,14 @@ html, body {
 }
 .footer .footerContenido .socialIcons a img {
   border-radius: 50%;
+  transition: 0.3s ease, 0.3s ease;
+}
+.footer .footerContenido .socialIcons a img:hover {
+  transform: scale(1.1);
 }
 .footer .footerContenido .footerDerechos {
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 16px;
   border-top: 1px solid #444;
   padding: 10px 0;
 }
@@ -207,13 +252,6 @@ html, body {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-@media (min-width: 768px) {
-  .preguntasSeccion {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 .preguntasSeccion .pregunta {
   background-color: #e0f7fa;
   padding: 15px;
@@ -221,11 +259,6 @@ html, body {
   margin-bottom: 5px;
   font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-@media (min-width: 768px) {
-  .preguntasSeccion .pregunta {
-    padding: 25px;
-  }
 }
 .preguntasSeccion .respuestaPregunta {
   background-color: #ffffff;
@@ -235,12 +268,6 @@ html, body {
   font-size: 130%;
   margin-bottom: 20px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-@media (min-width: 768px) {
-  .preguntasSeccion .respuestaPregunta {
-    padding: 35px;
-    font-size: 30px;
-  }
 }
 
 .imagenFondo {
@@ -269,8 +296,11 @@ html, body {
 }
 
 .boton {
-  background-color: #ff69b4;
-  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/botonFondo.gif");
+  color: #7c4b63;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
@@ -282,9 +312,11 @@ html, body {
   margin-right: 100px;
   font-size: 25px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: 0.3s ease, 0.3s ease;
 }
 .boton:hover {
   background-color: #ff1493;
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -304,15 +336,32 @@ html, body {
     height: 100px;
   }
 }
+@media (min-width: 768px) {
+  .preguntasSeccion {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pregunta {
+    padding: 25px;
+  }
+  .respuestaPregunta {
+    padding: 35px;
+    font-size: 30px;
+  }
+}
 .grupo {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
-  background-color: #ffe7e7;
   padding: 15px;
   border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/fondoLogo.jpg);
 }
 .grupo .imagenGrupo {
   width: 100%;
@@ -325,11 +374,15 @@ html, body {
   font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .grupo p {
-  width: 70%;
   margin: 0 auto;
   text-align: center;
   font-size: 16px;
   font: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 6px;
+  width: 90%;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -343,15 +396,16 @@ html, body {
     max-width: 35%;
   }
   .containerGrupos .grupo h4 {
-    font-size: 32px;
+    font-size: 35px;
   }
   .containerGrupos .grupo p {
-    font-size: 19px;
+    font-size: 22px;
   }
 }
 @media (max-width: 767px) {
   .containerGrupos {
     display: block;
+    padding: 10px;
   }
   .containerGrupos .grupo {
     width: 90%;
@@ -362,10 +416,10 @@ html, body {
     max-width: 200px;
   }
   .containerGrupos .grupo h4 {
-    font-size: 23px;
+    font-size: 28px;
   }
   .containerGrupos .grupo p {
-    font-size: 16px;
+    font-size: 14px;
     width: 90%;
   }
 }
@@ -375,26 +429,32 @@ html, body {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #ffe7e7;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/oshi-no-ko-bd.jpg);
   padding: 15px;
   border-radius: 10px;
 }
 .personaje .imagenPersonaje {
   width: 100%;
-  max-width: 200px;
+  max-width: 150px;
   height: auto;
 }
 .personaje h4 {
-  font-size: 24px;
   margin: 10px 0;
   font: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .personaje p {
-  width: 70%;
+  height: auto;
   margin: 0 auto;
   text-align: center;
-  font-size: 16px;
   font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 6px;
+  width: 90%;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -408,15 +468,16 @@ html, body {
     max-width: 35%;
   }
   .containerPersonajes .personaje h4 {
-    font-size: 32px;
+    font-size: 35px;
   }
   .containerPersonajes .personaje p {
-    font-size: 19px;
+    font-size: 22px;
   }
 }
 @media (max-width: 767px) {
   .containerPersonajes {
     display: block;
+    padding: 10px;
   }
   .containerPersonajes .personaje {
     width: 90%;
@@ -424,13 +485,13 @@ html, body {
     margin-right: auto;
   }
   .containerPersonajes .personaje .imagenPersonaje {
-    max-width: 150px;
+    max-width: 120px;
   }
   .containerPersonajes .personaje h4 {
-    font-size: 23px;
+    font-size: 28px;
   }
   .containerPersonajes .personaje p {
-    font-size: 16px;
+    font-size: 14px;
     width: 90%;
   }
 }
@@ -438,14 +499,11 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 .characteriaLinks .link {
-  margin-top: 30px;
-  margin-bottom: 30px;
   position: relative;
-  width: 150px;
-  height: 150px;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -481,14 +539,14 @@ html, body {
   padding: 5px;
   border-radius: 5px;
   font: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 @media (min-width: 768px) {
   .characteriaLinks {
-    justify-content: space-between;
-    margin: 30px;
     margin-right: 130px;
     margin-left: 130px;
+    gap: 100px;
   }
   .link {
     width: 200px;
@@ -503,12 +561,12 @@ html, body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
   }
   .link {
     width: 45%;
     max-width: 150px;
     height: 150px;
-    margin-bottom: 20px;
   }
   .link img {
     height: 100%;
@@ -522,7 +580,7 @@ html, body {
   align-items: center;
   justify-content: center;
   gap: 60px;
-  padding: 20px;
+  padding: 30px;
 }
 .galeria .galeriaCarousel {
   width: 100%;

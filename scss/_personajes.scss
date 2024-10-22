@@ -2,29 +2,31 @@
   text-align: center;
   @include marginTopBottom;
   @include margin-leftright-auto;
-  background-color: $color-fondo-animaciones;
+  @include imagenes;
+  background-image: url(../img/oshi-no-ko-bd.jpg);
   padding: 15px;
   border-radius: 10px;
 
   .imagenPersonaje {
     width: 100%;
-    max-width: 200px;
+    max-width: 150px;
     height: auto;
+    
   }
 
   h4 {
-    font-size: 24px;
     margin: 10px 0;
     font: $fuente-titulos;
   }
 
   p {
-    width: 70%;
+    height: auto;
     margin: 0 auto;
     text-align: center;
-    font-size: 16px;
     font: $fuente-parrafos;
+    @include fondo-transparente;
   }
+  
 }
 
 @media (min-width: 768px) {
@@ -36,11 +38,11 @@
       max-width: 35%;
 
       h4 {
-        font-size: 32px;
+        font-size: 35px;
       }
 
       p {
-        font-size: 19px;
+        font-size: 22px;
       }
     }
   }
@@ -49,21 +51,22 @@
 @media (max-width: 767px) {
   .containerPersonajes {
     display: block;
+    padding: 10px;
 
     .personaje {
       width: 90%;
       @include margin-leftright-auto;
 
       .imagenPersonaje {
-        max-width: 150px;
+        max-width: 120px;
       }
 
       h4 {
-        font-size: 23px;
+        font-size: 28px;
       }
 
       p {
-        font-size: 16px;
+        font-size: 14px;
         width: 90%;
       }
     }

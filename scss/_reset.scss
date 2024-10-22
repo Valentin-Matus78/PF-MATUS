@@ -7,3 +7,30 @@ html, body {
   height: 100%;
   background-color: $color-backgroundhtml;
 }
+
+@media (min-width: 768px) {
+  main.imagenesLaterales {
+    position: relative;
+  }
+
+  main.imagenesLaterales::before,
+  main.imagenesLaterales::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    width: 200px;
+    height: 400px;
+    @include background-position;
+    z-index: -1;
+  }
+
+  main.imagenesLaterales::before {
+    @include imagenes-laterales-1;
+    background-image: url("../img/fondoGaleriaCostados1.png");
+  }
+
+  main.imagenesLaterales::after {
+    @include iamgenes-laterales-2;
+    background-image: url("../img/fondoGaleriaCostados2.png");
+  }
+}

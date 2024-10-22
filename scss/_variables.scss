@@ -1,13 +1,17 @@
 // Variables
 $color-fondo-animaciones: #ffe7e7;
 $color-fondo-titulos: #e0f7fa;
-$color-botones: #ff69b4;
+$color-botones: #ffa5d2;
 $color-fuente: white;
 $color-hover: #ff1493;
 $color-fondo-p: #ffffff;
 $color-fuente-2: #000;
-$color-backgroundhtml: rgb(244, 205, 211);
-$color-footer: #5f5757c8;
+$color-boton-inicio: #7c4b63;
+$color-backgroundhtml: rgba(247, 218, 243, 0.941);
+$fondo-trasparente: rgba(255, 255, 255, 0.4);
+
+$hover-boton: scale(1.1);
+$hover-boton-transition: 0.3s ease, 0.3s ease;
 
 $fuente-titulos: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 $fuente-parrafos: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -64,3 +68,40 @@ $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     justify-content: center;
 }
 
+@mixin imagenes{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin fondo-transparente{
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 6px;
+    width: 90%;
+    text-align: center;
+}
+
+@mixin bordes-black {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+@mixin background-position{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin imagenes-laterales-1{
+    left: 60px;
+    margin-top: 50px;
+    opacity: 20%;
+}
+
+@mixin iamgenes-laterales-2{
+    right: 60px;
+    margin-top: 50px;
+    opacity: 20%;
+}

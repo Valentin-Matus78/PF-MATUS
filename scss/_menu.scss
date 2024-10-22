@@ -20,9 +20,7 @@
         min-width: 20%;
         font-weight: bold;
         font: 1em sans-serif;
-        border-right: 1px solid black;
-        border-bottom: 1px solid black;
-        border-top: 1px solid black;
+        @include bordes-black;
   
         a {
           text-decoration: none;
@@ -45,11 +43,14 @@
     @include center-flex;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: $color-fondo-titulos;
     border-radius: 10px;
     box-shadow: $box-shadow;
     max-width: 400px;
     width: 100%;
+    background-image: url("../img/cerezos.gif");
+    @include imagenes;
+  
+  
   
     h3 {
       font-family: $fuente-titulos;
@@ -60,4 +61,12 @@
       font-weight: bold;
     }
   }
+
+  @media (max-width: 768px){
+    .tituloMenu{
+      width: 300px;
+    }
+  }
+
+  
   

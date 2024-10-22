@@ -4,9 +4,10 @@
     margin-bottom: 30px;
     margin-right: auto;
     margin-left: auto;
-    background-color: $color-fondo-animaciones;
     padding: 15px;
     border-radius: 10px;
+    @include imagenes;
+    background-image: url(../img/fondoLogo.jpg);
   
     .imagenGrupo {
       width: 100%;
@@ -21,11 +22,11 @@
     }
   
     p {
-      width: 70%;
       margin: 0 auto;
       text-align: center;
       font-size: 16px;
       font: $fuente-titulos;
+      @include fondo-transparente;
     }
   }
   
@@ -34,17 +35,18 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+    
   
       .grupo {
         flex: 1 1 35%;
         max-width: 35%;
   
         h4 {
-          font-size: 32px;
+          font-size: 35px;
         }
   
         p {
-          font-size: 19px;
+          font-size: 22px;
         }
       }
     }
@@ -53,6 +55,7 @@
   @media (max-width: 767px) {
     .containerGrupos {
       display: block;
+      padding: 10px;
   
       .grupo {
         width: 90%;
@@ -64,11 +67,11 @@
         }
   
         h4 {
-          font-size: 23px;
+          font-size: 28px;
         }
   
         p {
-          font-size: 16px;
+          font-size: 14px;
           width: 90%;
         }
       }

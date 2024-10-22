@@ -1,15 +1,17 @@
 .footer {
-  background-color: $color-footer;
+  background-image: url(../img/fondoFooter.jpg);
   color: $color-fuente;
   padding: 20px;
   text-align: center;
   font-family: $fuente-parrafos;
+  @include imagenes;
 
   .footerContenido {
     @include column-flex;
     max-width: 800px;
     margin: auto;
     padding: 0 20px;
+    font-weight: bold;
 
     .footerNosotros,
     .footerSocial {
@@ -18,7 +20,7 @@
       h3 {
         font: $fuente-titulos;
         margin-bottom: 10px;
-        font-size: 18px;
+        font-size: 22px;
         color: $color-fuente;
         border-bottom: 2px solid $color-backgroundhtml;
       }
@@ -34,16 +36,19 @@
       display: flex;
       gap: 10px;
 
-      a {
-        img {
-          border-radius: 50%;
+      a img {
+        border-radius: 50%;
+        transition: $hover-boton-transition;
+        
+        &:hover {
+          transform: $hover-boton;
         }
       }
     }
 
     .footerDerechos {
       margin-top: 20px;
-      font-size: 14px;
+      font-size: 16px;
       border-top: 1px solid #444;
       padding: 10px 0;
     }
